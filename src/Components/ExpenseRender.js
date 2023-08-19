@@ -1,4 +1,5 @@
 import ExpensesFilter from "./ExpensesFilter";
+import ExpenseList from "./ExpenseList";
 import React,{useState} from "react";
 import Card from './Card';
 import './ExpenseRender.css';
@@ -23,7 +24,7 @@ function ExpenseRender(props)
         <Card className="expenses">
         <ExpensesFilter onRenderFilter={UpdateOnRenderHandler} selected={filteredYear}/>
         
-        {/* <ExpenseList detail={filteredByYear}/> */}
+        <ExpenseList detail={filteredByYear}/> 
         
         </Card>
         </div>
