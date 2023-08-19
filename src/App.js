@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import CYngH5 from  './assets/images/CYngH5.jpg';
 import InputForm from './Components/InputForm';
+import ExpenseRender from './Components/ExpenseRender';
 import './App.css';
 const Dummy_Data = [
   {
@@ -24,8 +25,7 @@ function App() {
   const[deatilArray,setDetailArray]=useState(Dummy_Data);
   function addExpenseHandler(expense)
   {
-        // console.log('In App.JS');
-        // console.log(expense);
+        
         setDetailArray((prevData)=>{
           return([ expense,...prevData]);
         });
@@ -34,7 +34,8 @@ function App() {
     <div className='bg'>
       
          <img src={CYngH5} alt="coffe bean background" />
-        <InputForm detail={deatilArray}></InputForm>
+        <InputForm onAddExpense={addExpenseHandler}></InputForm>
+        
     
       
     </div>

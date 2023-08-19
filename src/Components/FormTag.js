@@ -6,7 +6,6 @@ function FormTag(props)
      const[enteredAmount,setEnteredAmount]=useState('');
      const[enteredDate,setEnteredDate]=useState('');
     
-    
     function amountChangeHandler(event)
     {
         setEnteredAmount(event.target.value);
