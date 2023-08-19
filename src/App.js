@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import CYngH5 from  './assets/images/CYngH5.jpg';
-import InputForm from './Components/FormTag';
+import InputForm from './Components/InputForm';
 import './App.css';
-const concepts = [
+const Dummy_Data = [
   {
     orderId: '#123',
     amount : 12,
@@ -21,11 +21,20 @@ const concepts = [
 ];
 
 function App() {
+  const[deatilArray,setDetailArray]=useState(Dummy_Data);
+  function addExpenseHandler(expense)
+  {
+        // console.log('In App.JS');
+        // console.log(expense);
+        setDetailArray((prevData)=>{
+          return([ expense,...prevData]);
+        });
+      }
   return (
     <div className='bg'>
       
          <img src={CYngH5} alt="coffe bean background" />
-        <InputForm></InputForm>
+        <InputForm detail={deatilArray}></InputForm>
     
       
     </div>
