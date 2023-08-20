@@ -2,5 +2,5 @@
 
 Coffe Expense Tracker Website Uisng React # COPS Hackathon
 
-A basic react js website which helps you to see your coffee expenditues over last 3 years
-It uses a lot of useState React Hook so that conditionallt data can be shown and has forms too
+A basic react js website which helps you to see your coffee expenditures over last 2-3 years
+It consists of good usage of useState React Hook so that conditionally data can be shown and has responsive forms too
